@@ -1,0 +1,18 @@
+-Guarentee packets arrive when they are meant to. I.E, no login during ingame state.
+-Need to handle the limitations around skills. As in, 99 points are the maximum you can set a skill too
+ since Mickey adds + 100 to any free skill.
+-Minimum Attribute points need to be 60. 10 for each attr, then 10 for life.
+-Need to verify Head/Arms/Chest/Leg values at some point.
+-Need to ensure name uniqueness.
+-Need to make sure account is not already online.
+
+Importer notes
+*.map
+Header -> 0x1e (30)	
+	- int16 x int16 for map size.
+	- int16 x 1nt6 x int16 (x, y, z)
+Height -> 0x9c40 bytes (40k)
+Water -> 0x9c40 bytes (40k)
+-- Land Ownership
+Surface -> 0x9c40 (40k)
+Unknown -> 0x850 (2128)
