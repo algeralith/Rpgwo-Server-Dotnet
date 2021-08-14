@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="ECS\Components\Items\" />
+    <Folder Include="ECS\Components\Mobs\" />
+    <Folder Include="ECS\Components\Shared\" />
+    <Folder Include="ECS\Components\Tiles\" />
     <Folder Include="Networking\Packets\" />
   </ItemGroup>
 

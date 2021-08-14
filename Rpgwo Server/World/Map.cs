@@ -27,6 +27,12 @@ namespace Rpgwo_Server.World
         private byte[,] _waterMap;
         private byte[,] _surfaceMap;
 
+        // Grass will need it's own system at some point, since it will be dynamic.
+        // Players walking upon grass should degrade, and server ticks shoulder grow.
+        // Admins should not effect grass either.
+        // For now, I'll just use a byte. Each step upon grass can subtract, then mod 10 to determine stage.
+        private byte[,] _grassMap;
+
         // RPGWO Maps consist of multiple parts.
         // Height Map.
         // Water Map.
@@ -47,6 +53,7 @@ namespace Rpgwo_Server.World
             _heightMap = new byte[_mapWidth, _mapHeight];
             _waterMap = new byte[_mapWidth, _mapHeight];
             _surfaceMap = new byte[_mapWidth, _mapHeight];
+            _grassMap = new byte[_mapHeight, _mapHeight];
         }
 
         public byte GetElevation(int x, int y)
